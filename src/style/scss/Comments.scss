@@ -1,0 +1,73 @@
+@import './responsive.scss';
+
+.modal-dialog {
+    margin-top: 150px;
+}
+
+@include mobile {
+    .modal-dialog {
+        margin: 150px 10px;
+    }
+}
+.comment-item {
+    background-color: rgb(255, 255, 255);
+    & hr {
+        margin: 0px;
+        padding: 0px;
+        color: rgb(140, 140, 140);
+    }
+
+    & .btn-addcmt {
+        border: 0px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        padding: 10px;
+        width: 40px;
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    & .comment-item-info {
+        border-radius: 20px 20px 0 0;
+        padding: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        & .user-cmt {
+            width: 80%;
+            padding-left: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & .info-username {
+            padding-right: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: rgb(10, 10, 10);
+            max-width: 200px;
+        }
+        & .date-posted {
+            color: rgb(132, 132, 132);
+        }
+        & > button {
+            background-color: rgb(255, 255, 255);
+            margin-right: 10px;
+            border: 0;
+            padding: 10px;
+            border-radius: 50%;
+            &:hover {
+                background-color: rgb(210, 208, 208);
+            }
+        }
+    }
+    & .comment-item-body {
+        padding: 0px 0px 0px 15px;
+        margin: 10px;
+        overflow-wrap: break-word;
+        max-height: 300px;
+        overflow: auto;
+        text-align: justify;
+    }
+}
